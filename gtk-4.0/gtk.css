@@ -1,0 +1,200 @@
+/* ~/.config/gtk-4.0/gtk.css */
+
+button.titlebutton,
+windowcontrols > button {
+  color: transparent;
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-size: 16px;
+}
+
+button.titlebutton:backdrop {
+  opacity: 0.5;
+}
+
+windowcontrols > button {
+  border-radius: 100%;
+  padding: 0;
+  margin: 0 3px;
+}
+
+windowcontrols > button > image {
+  padding: 0;
+}
+
+.titlebar .right {
+  margin-right: 8px;
+}
+
+.titlebar .left {
+  margin-left: 8px;
+}
+
+windowcontrols.end {
+  margin-right: 8px;
+}
+
+windowcontrols.start {
+  margin-left: 8px;
+}
+
+windowcontrols > button.close:backdrop,
+windowcontrols > button.maximize:backdrop,
+windowcontrols > button.minimize:backdrop {
+  background-image: none;
+  background-color: #787878;
+}
+
+windowcontrols > button.close {
+  background-color: #fe6154;
+  background-position: center;
+  background-size: contain;
+}
+
+windowcontrols > button.close:hover,
+windowcontrols > button.close:hover:backdrop {
+  background-color: shade(#ff0500,0.8);
+  background-color: #c6464f;
+  background-position: center;
+  background-size: contain;
+}
+
+windowcontrols > button.maximize {
+  background-color: #59c837;
+  background-position: center;
+  background-size: contain;
+}
+
+windowcontrols > button.maximize:hover,
+windowcontrols > button.maximize:hover:backdrop {
+  background-color: shade(#05f528,0.8);
+  background-color: #4caa2f;
+  background-position: center;
+  background-size: contain;
+}
+
+.fullscreen windowcontrols > button.maximize:hover,
+.maximized windowcontrols > button.maximize:hover {
+  background-position: center;
+  background-size: contain;
+}
+
+windowcontrols > button.minimize {
+  background-color: #f1ae1a;
+  background-position: center;
+  background-size: contain;
+}
+
+windowcontrols > button.minimize:hover,
+windowcontrols > button.minimize:hover:backdrop {
+  background-color: shade(#ffa300, 0.8);
+  background-color: #b58214;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Transparent Sidebar */
+window {
+  background: alpha(@window_bg_color, 0.8);
+}
+
+.sidebar-pane,
+.sidebar,
+.navigation-sidebar {
+  background: transparent;
+}
+
+.content-pane {
+  background: @view_bg_color;
+}
+
+/* Lollypop */
+window>deck>grid>headerbar.titlebar>widget>widget>box>image {
+  margin-top: -1px;
+}
+
+window>deck>grid>headerbar.titlebar>box> :nth-child(1) {
+  margin-right: -40px;
+  opacity: 0;
+}
+
+window>deck>grid>headerbar.titlebar>box> :nth-child(2) {
+  margin-right: 27px;
+}
+
+window>deck>grid>headerbar.titlebar>box>.close {
+  margin-right: 0;
+}
+
+window>deck>grid>headerbar.titlebar {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      transparent 197px,
+      @headerbar_shade_color 198px,
+      @headerbar_bg_color 198px,
+      @headerbar_bg_color 100%);
+  border-bottom: none;
+}
+
+/* Builder */
+.org-gnome-Builder paneldockchild.center {
+  background: @window_bg_color;
+}
+
+.org-gnome-Builder.workspace paneldockchild.start {
+  background: transparent;
+}
+
+/* Speedtest (xyz.ketok.Speedtest) */
+.horizontal>gauge.dl.horizontal>overlay>.background {
+  background: transparent;
+}
+
+.horizontal>gauge.up.horizontal>overlay>.background {
+  background: transparent;
+}
+
+/* Gnome Tweaks */
+window>leaflet>box:last-child>scrolledwindow>viewport.frame {
+  background: @window_bg_color;
+}
+
+.tweak-titlebar-left {
+  background: alpha(@window_bg_color, 0.8);
+}
+
+/* Geary */
+.geary-main-layout>leaflet>leaflet>box:first-child,
+.geary-main-layout>leaflet>leaflet>box:first-child>headerbar {
+  background: transparent;
+}
+
+/* Rhythmbox */
+window box:nth-child(2) paned:nth-child(3) paned:nth-child(3) box:nth-child(2) {
+  background: @window_bg_color;
+}
+
+window box:nth-child(2) paned:nth-child(3) box:first-child paned grid .sidebar-toolbar,
+window box:nth-child(2) paned:nth-child(3) box:first-child paned grid .sidebar-toolbar button {
+  background: transparent;
+}
+
+window box toolbar {
+  background: transparent;
+  /* Comment this if you don't want transparency on rhythmbox topbar */
+}
+
+/* Disks */
+window>deck>box>leaflet>box:nth-child(3)>stack>statuspage>scrolledwindow>viewport.frame,
+window>deck>box>leaflet>box:nth-child(3)>stack>scrolledwindow>viewport.frame {
+  background: @window_bg_color;
+}
+
+window>deck>box>leaflet>box:nth-child(1)>scrolledwindow treeview.view {
+  background: transparent;
+}
+
+window>deck>box>leaflet>box:nth-child(1)>headerbar.titlebar.windowhandle {
+  background: transparent;
+  border-bottom: none;
+}
